@@ -3,7 +3,7 @@
 """
 
 n = int(input("Enter max number: "))
-degree = 2
+degree = 1
 while degree <= n:
     print(f"{degree} ")
     degree = degree * 2

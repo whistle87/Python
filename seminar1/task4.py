@@ -6,5 +6,7 @@ if profit > 0:
     print("Profitability of revenue is {}".format(profit / revenue))
     employees = int(input("Enter number of employees: "))
     print("The company's profit per employee is {}".format(profit / employees))
+elif profit == 0:
+    print("Costs and revenue are equal")
 else:
     print("The company has worked with loss. Its value is {}.".format(profit))
