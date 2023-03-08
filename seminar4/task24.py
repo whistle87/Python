@@ -12,17 +12,13 @@
 заход собирающий модуль, находясь перед некоторым кустом заданной во входном файле грядки.
 """
 
-import random
-
 file_name = input("Enter a file path: ")
 with open(file_name, 'r') as f:
     berries_on_bush = f.readlines()
-    bush = random.randint(0, len(berries_on_bush))
-    if bush == 0:
-        berries = int(berries_on_bush[0]) + int(berries_on_bush[1]) + int(berries_on_bush[len(berries_on_bush) - 1])
-    elif bush == len(berries_on_bush) - 1:
-        berries = int(berries_on_bush[0]) + int(berries_on_bush[len(berries_on_bush) - 2]) + int(
-            berries_on_bush[len(berries_on_bush) - 1])
-    else:
-        berries = int(berries_on_bush[bush]) + int(berries_on_bush[bush - 1]) + int(berries_on_bush[bush + 1])
-    print(f"If bush is {int(bush) + 1} we will get {berries} berries.")
+    bush = list()
+    bush.append(int(berries_on_bush[0]) + int(berries_on_bush[1]) + int(berries_on_bush[len(berries_on_bush) - 1]))
+    bush.append(int(berries_on_bush[0]) + int(berries_on_bush[len(berries_on_bush) - 2]) + int(
+        berries_on_bush[len(berries_on_bush) - 1]))
+    for i in range(1, len(berries_on_bush) - 1):
+        bush.append(int(berries_on_bush[i]) + int(berries_on_bush[i - 1]) + int(berries_on_bush[i + 1]))
+    print(f"We can get {max(bush)} max berries.")
