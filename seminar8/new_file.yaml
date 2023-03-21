@@ -1,0 +1,11 @@
+currency_name:
+- euro
+- pound
+- yuan
+- ruble
+currency_quantity: 4
+currency_sign:
+  £: U+00A3
+  €: U+20AC
+  ₽: U+20BD
+  元: U+5143
