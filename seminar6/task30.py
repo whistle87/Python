@@ -12,5 +12,5 @@ try:
 except ValueError:
     print("It is not a number")
 else:
-    progression = [first_num + (el - 1) * diff for el in range(1, el_amount + 1)]
+    progression = [first_num + el * diff for el in range(el_amount)]
     print(progression)

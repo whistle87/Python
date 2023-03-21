@@ -20,9 +20,14 @@ class Road:
         self._length = length
         self._width = width
 
-    def mass_count(self, mass=mass, thick=thick):
-        return mass * thick * self._width * self._length / 1000
+    def mass_count(self):
+        return Road.mass * Road.thick * self._width * self._length / 1000
 
 
 first_road = Road(20, 5000)
-print(first_road.mass_count(10, 0.01))
+print(first_road.mass_count())
+Road.mass = 1
+Road.thick = 0.5
+print(first_road.mass_count())
+second_road = Road(20, 5000)
+print(second_road.mass_count())

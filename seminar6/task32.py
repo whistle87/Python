@@ -6,7 +6,7 @@
 
 def generator(array, min_value, max_value):
     for i in range(len(array)):
-        if min_value < array[i] < max_value:
+        if min_value <= array[i] <= max_value:
             yield i
 
 
